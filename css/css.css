@@ -1,103 +1,213 @@
-/*color #497cbf #6aa5d9 #203c73 #8c6d46*/
+/*color 파랑#497cbf 연파랑#6aa5d9 진파랑#203c73*/
 /*reset*/
 * {padding:0; margin:0; box-sizing: border-box; font-family: 'Noto Sans KR', sans-serif; color: #203c73;}
 li {list-style: none;}
 a {text-decoration: none;}
+body {position: relative; width: 1900px; margin: 0 auto;}
+h2 {padding-top: 40px; padding-left: 15px; font-weight: 600;}
 
 /*header*/
 #logo {width: 105px; height: 105px; position: fixed; top: 5%; left: 5%; animation: spin 10s linear infinite; z-index: 10;}
 /*로고 회전*/
 @keyframes spin {
     0% {transform: rotate(0);}
-    100% {transform:rotate(360deg)}}
+    100% {transform:rotate(360deg);}
+}
 /*header end*/
 /*1st page*/
 #hello {width: 100%; height: 100vh; background: url(../image/hellobg.jpg) no-repeat fixed; background-size: cover;}
+
 .wrapper {width: 80%; height:100%; margin: 0 auto;}
+
 #hello-inner-wrapper {width: 100%; height: auto; position: relative; top: 30%;}
-#hello-inner-wrapper h1{width: 750px; height: 140px; margin:auto; font-size: 4rem; text-align: center; line-height: 120px; color: #fff; text-shadow: 4px 4px 2px #203c73; 
-    animation: typing 2s steps(18), blink .5s step-end infinite alternate;white-space: nowrap; overflow: hidden; border-right: 3px solid;}
-/*타이핑 효과*/
+/*https://codepen.io/denic/pen/GRoOxbM typing effect*/
+#hello-inner-wrapper h1{width: 1050px; height: 140px; margin:auto; font-size: 4rem; text-align: center; line-height: 120px; color: #fff; text-shadow: 4px 4px 2px #203c73; animation: typing 2s steps(18), blink .5s step-end infinite alternate; white-space: nowrap; overflow: hidden; border-right: 3px solid;}
 @keyframes typing {from {width: 0}}
-@keyframes blink {50% {border-color: transparent}}
+@keyframes blink {
+    50% {border-color: transparent;}
+}
 /*---hello end---*/
 /*2st page*/
 #profile {width: 100%; height: auto; position: relative;}
+
 #blob {width:500px; height: 500px; background:url(../image/blob-haikei.png) no-repeat; position: absolute; top: 80px; left: -150px; transform: rotate(45deg); z-index: -1;}
+
 .profile-inner {width: 100%; height: 80%; padding-top: 100px; margin: auto; display: grid; grid-template-columns: auto auto; grid-gap : 50px 30px; justify-content: space-between; justify-items: center; align-items: center;}
-.profile-inner-profile {width: 300px; height: 300px; background: url(../image/profile.png) no-repeat; }
+.profile-inner-profile {width: 300px; height: 300px; background: url(../image/profile.png) no-repeat;}
 .profile-inner-content {width: 100%; min-width: 350px; height: 430px; line-height: 200%; text-align: justify;}
 /*button*/
+
 .content-resume {padding: 20px 0; position: relative;}
-button {width: 100px; height: 30px; cursor: pointer; position: absolute; top: 22px; left: 160px;}
-button:hover {background-color: #6aa5d9; border : none; border-radius: 5%; color : #fff; transition-duration: 0.5s; animation: rotate 0.7s ease-in-out both; animation-delay: 0.06s;}
-/*button animation*/
-@keyframes rotate
-    {0%{transform: rotate(0deg) translate3d(0, 0, 0)}
+.content-resume button {width: 100px; height: 30px; cursor: pointer; position: absolute; top: 60px; left: 0;}
+/*https://codepen.io/Danil89/pen/MzrEdX button animation*/
+.content-resume button:hover {background-color: #6aa5d9; border : none; border-radius: 5%; color : #fff; transition-duration: 0.5s; animation: rotate 0.7s ease-in-out both; animation-delay: 0.06s;}
+
+@keyframes rotate{
+    0%{transform: rotate(0deg) translate3d(0, 0, 0)}
     25%{transform: rotate(3deg) translate3d(0, 0, 0)}
     50%{transform: rotate(-3deg) translate3d(0, 0, 0)}
     75%{transform: rotate(1deg) translate3d(0, 0, 0)}
-    100%{transform: rotate(0deg) translate3d(0, 0, 0)}}
+    100%{transform: rotate(0deg) translate3d(0, 0, 0)}
+}
 /*화면이 줄어들었을 때. 소형 노트북, 태블릿, 모바일 환경*/
 @media (max-width:980px) {
     #blob {width:350px; height: 350px; background:url(../image/blob-haikei.png) no-repeat;background-size: cover; position: absolute; top: 100px; left: -100px; transform: rotate(45deg);}
-    .profile-inner {display: flex; flex-wrap: wrap; padding-bottom: 50px; align-items: center; justify-content: center;}
+    .profile-inner {display: flex; flex-wrap: wrap; padding-bottom: 50px; align-items: center;}
     .profile-inner-content {min-width: 385px;}
 }
 /*---profile end---*/
 /*3st page*/
-#skills {width: 100%; height: 70vh; position: relative;}
-.skill-blob {width:350px; height:350px; position:absolute; right:0; background: url("../image/blob-haikei1.png") no-repeat; background-size: cover;}
-.skill-container {width: 70%; margin: 0 auto;}
-@keyframes load {from {width: 0%;}}
-.bar{width: 100%; height: 45px; position: relative;background-color: #eee; padding: 3px; border-radius: 15px; margin-bottom: 5px; font-size: 1.2rem; font-weight: bold;}
-.bar::before{content:attr(data-skill); background-color: #497cbf; display: inline-block; padding: 5px 0 5px 10px; border-radius: inherit; animation: load 2s 0s;}
+#skills {width: 100%; height: 80vh; position: relative; margin-top: 40px;}
+
+.skill-blob {width:320px; height:320px; position:absolute; right:20px; background: url("../image/blob-haikei1.png") no-repeat; background-size: cover;}
+
+.skill-container {width: 90%; margin: 0 auto; padding: 40px 0;}
+/*https://codepen.io/milacarrera/pen/pEPoZz animated skills bar*/
+@keyframes load {
+    from {width: 0%;}
+}
+
+.bar{width: 100%; height: 45px; position: relative; padding: 3px; border-radius: 15px; margin-bottom: 5px; font-size: 1rem; font-weight: bold;}
+.bar::before{content:attr(data-skill); background-color: #EB836B; display: inline-block; padding: 5px 0 5px 10px; border-radius: inherit; animation: load 2s 0s;}
 .bar.front::before{background-color: #6aa5d9;}
-.bar.equip::before{background-color: #a6cfe3;}
+.bar.equip::before{background-color: #16B49A;}
 .bar.learning::before{width: calc(20% - 10px);}
 .bar.middle::before{width: calc(40% - 10px);}
 .bar.intermediate::before{width: calc(60% - 10px);}
-.bar.advanced::before{width: calc(75% - 10px);}
-.bar.expert::before{width: calc(90% - 10px);}
-
+.bar.advanced::before{width: calc(70% - 10px);}
+.bar.expert::before{width: calc(80% - 10px);}
+.bar span {padding: 0 10px;}
 /*---skills end---*/
 /*4st page*/
-#potfolio {width: 100%; height: 100vh;}
+#potfolio {width: 100%; height: 155vh; position: relative;background-color: #E8EFFF}
+
+.pot-blob {width:300px; height: 300px; background: url("../image/blob.png") no-repeat; background-size: cover; position: absolute; top: -10vh; left: 0; z-index: -1;}
+
+.po-pro {padding: 30px;}
+
+.digital {padding-top:-20px; display: flex; flex-wrap: wrap; flex-direction: row; justify-content: space-evenly;}
+.digital img {height: 250px; margin: 30px 10px;}
+
+.projects {width: 100%; height: 25%; display: flex; padding-bottom:50px; align-items: center; flex-wrap: wrap;}
+
+.item {flex: 1; transition: flex 0.5s linear; position: relative;}
+.item img{width: 100%;}
+.item:hover {flex: 2.5;}
+.item:hover .overlay{height: 100%;}
+.overlay {position: absolute; bottom: 0; left: 0; right: 0; overflow: hidden; width: 100%;}
+
+.bg1 {background-color: rgba(255, 103, 1,0.8);}
+.bg2 {background-color: rgba(242, 168, 121,0.9);}
+.bg3 {background-color: rgba(164, 162, 173,0.9);}
+.bg4 {background-color: rgba(73, 124, 191,0.8);}
+
+.buttons {color: #fff; position: absolute; top: 45%; left: 40%; transform: -50%, -50%; text-align: center;}
+.buttons button {width: 150px; height: 50px; font-size: 1.2rem; border: none; border-radius: 5px; cursor: pointer;  box-shadow: #333 2px 2px 2px;}
+.buttons button:hover{transition: transform 0.4s linear; transform: translateY(4px) scale(0.95); background: rgb(106,165,217); background: radial-gradient(circle, rgba(106,165,217,1) 0%, rgba(148,187,233,1) 100%); color: #fff; box-shadow: none;}
+
+/*https://codepen.io/designcouch/pen/obvKxm modal animations unfolding*/
+.modal-container {display:none; position: fixed; height: 100%; width: 100%; top: 0; left: 0; transform: scale(0); z-index: 100; animation: unfoldIn 1s cubic-bezier(0.165, 0.84, 0.44, 1) forwards;}
+
+.modal-container .modal-background .modal {scroll-behavior: smooth; background: white; padding: 50px; display: inline-block; border-radius: 3px; font-weight: 300; position: relative; width: 900px; height: 1000px; overflow: auto; transform: scale(0); animation: zoomIn 0.5s 0.8s cubic-bezier(0.165, 0.84, 0.44, 1) forwards;}
+
+.modal-background .modal h2 {font-size: 1.5rem; line-height: 200%; margin-bottom: 30px;}
+.modal-background .modal h3 {font-weight: 400;}
+.modal-background .modal p {font-size: 1rem; line-height: 150%; padding: 15px; text-align: justify;}
+.modal article {width: 650px; margin: 0 auto;}
+.modal div {margin: 10px;}
+
+.modal-container .modal a {text-align: center; display: inline-block; width: 130px; height: 45px; border: 1px solid #203c73; line-height: 45px; border-radius: 5px;}
+.modal-container .modal a:hover {background-color: #6aa5d9; border: 0; color: #fff; border-radius: 5px;}
+
+.modal-container.out {transform: scale(1); animation: unfoldOut 1s 0.3s cubic-bezier(0.165, 0.84, 0.44, 1) forwards;}
+
+.modal-container.out .modal-background .modal{animation: zoomOut 0.5s cubic-bezier(0.165, 0.84, 0.44, 1) forwards;}
+
+.modal-container .modal-background {width: 100vw; height: 100vh; display: table-cell; background: rgba(0, 0, 0, 0.8); text-align: center; vertical-align: middle;}
+
+@keyframes unfoldIn {
+    0% {transform: scaleY(0.005) scaleX(0);}
+    50% {transform: scaleY(0.005) scaleX(1);}
+    100% {transform: scaleY(1) scaleX(1);}
+}
+@keyframes unfoldOut {
+    0% {transform: scaleY(1) scaleX(1);}
+    50% {transform: scaleY(0.005) scaleX(1);}
+    100% {transform: scaleY(0.005) scaleX(0);}
+}
+@keyframes zoomIn {
+    0% {transform: scale(0);}
+    100% {transform: scale(1);}
+}
+@keyframes zoomOut {
+    0% {transform: scale(1);}
+    100% {transform: scale(0);}
+}
+
+.unblob {width:320px; height: 320px; background: url("../image/blob-haikei2.png") no-repeat; background-size: cover; position: absolute; bottom: 0; right: 0; z-index: -1;}
 /*---potfolio end---*/
 /*5st page*/
-#interesting {width: 100%; height: 100vh; position: relative;}
-#int-blob {width:320px; height: 320px; background: url("../image/blob-haikei2.png") no-repeat; background-size: cover; position: absolute; bottom: 0; left: -180px; z-index: -1;}
+#interesting {width: 100%; height: 100vh; position: relative; }
+
+#int-blob {width:300px; height: 300px; background: url("../image/blob2.png") no-repeat; background-size: cover; position: absolute; bottom: 0; left: -100px; z-index: -1;}
+
+/*https://codepen.io/ramonchito2/pen/ZrVEJL float animation*/
 .interesting-inner {width:100%; max-width: 1000px; height: 80vh; margin: 0 auto; margin-top: 50px; position: relative;  animation: float 3s linear infinite;}
+
 @keyframes float {
     0% {transform: translate3d(0,0,0)}
-    55%{transform: translate3d(0,-25px,0)}
-    100%{transform: translate3d(0,0,0)} }
+    55%{transform: translate3d(0,-20px,0)}
+    100%{transform: translate3d(0,0,0)} 
+}
+
 .interest {position: absolute; text-align: center;}
 .interest:hover {transform: scale(1.2); transition-duration: 0.5s;}
-.b {width: 250px; height: 60px;}
+.interest:hover .tooltip {visibility: visible; transition-delay: 0.2s;}
+
+.tooltip {width: 125px; display: inline-block; position:absolute; visibility: hidden; font-size: 0.7rem; color: #333; background-color: rgba(106, 165, 217,.6); line-height: normal; top: 0; padding: 10px; border-radius: 5px; animation:float1 5s linear infinite}
+
+@keyframes float1 {
+    0% {transform: translate3d(0,0,0)}
+    55%{transform: translate3d(0,-8px,0)}
+    100%{transform: translate3d(0,0,0)} 
+}
+
+.b {width: 250px; height: 60px; font-size: 2rem;}
 .m {width: 120px; height: 40px; font-size: 1.5rem;}
-.s {width: 100px; }
+.s {width: 100px;}
+
 .skills {font-size: 2.5rem; top: 0; bottom:0; right:0; left: 0; margin: auto;}
-.web {font-size: 2rem; top:30%; right: 10%;}
+
+.web {top:28%; right: 10%;}
 .eng {top: 40%; right: 0; transform: rotate(-30deg);}
-.impo {top: 55%; right: 0; left: 0; margin: auto;}
-.swim {bottom :30%; left:20%; transform: rotate(30deg);}
+.impo {top: 60%; right: 0; left: 0; margin: auto;}
+.swim {bottom :30%; left:22%; transform: rotate(30deg);}
 .no {bottom: 0; right: 0;}
 .book {bottom: 30%; right: 0;}
 .cafe {bottom: 20%; right: 20%; transform: rotate(270deg);}
 .god {top: 0; right: 0; transform: rotate(90deg);}
-.xd {top: 10%; right: 40%;}
+.secu {top: 10%; right: 40%;}
 .health {top: 15%; left: 0; transform: rotate(90deg);}
 .draw {bottom: 30%; left: 0; transform: rotate(270deg);}
 .memo {top: 25%; left: 25%;}
 .iso {bottom: 0; left: 10%; margin: auto;}
 .mm {top: 37%; left: 5%;}
+
 /*---interesting end*/
 /*6st page*/
-#contect {width: 100%; height: 100vh;background: url(../image/contectbg.jpg) no-repeat fixed; background-size: contain;}
-#contect-inner {width: 100%; height: 100vh}
+#contect {width: 100%; height: 100vh; background: url(../image/contectbg.jpg) no-repeat fixed; background-size: cover;}
+#contect-inner {width: 100%; height: 100vh; position: relative;}
+
+.mail {width: 450px; position: absolute; top: 38%; left: 40%; margin: auto; font-size: 4rem; text-align: center;}
+.mail a {display: block; width: 100%;}
+
+.contect {width: 450px; position: absolute; top: 48%; left: 40%; text-align: center;}
 /*---contect end---*/
 /*footer*/
-footer {width: 100%;}
+footer {width: 90%; position: absolute; bottom: 10px;}
 
+.sns {display: flex; padding-left: 15px;}
+.sns p {width: 50px; height: 50px; text-align: center; margin: 0 10px;}
+.sns a {width: 100%; height: 100%; display: block;}
+.sns img {width: 30px; height: 30px; margin-top: 10px;}
 /*---footer end---*/
