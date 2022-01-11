@@ -15,7 +15,7 @@ h2 {padding-top: 40px; padding-left: 15px; font-weight: 600;}
 }
 /*header end*/
 /*1st page*/
-#hello {width: 100%; height: 100vh; background: url(../image/hellobg.jpg) no-repeat fixed; background-size: cover;}
+#hello {width: 100%; height: 1024px; background: url(../image/hellobg.jpg) no-repeat fixed; background-size: cover;}
 
 .wrapper {width: 80%; height:100%; margin: 0 auto;}
 
@@ -57,7 +57,7 @@ h2 {padding-top: 40px; padding-left: 15px; font-weight: 600;}
 }
 /*---profile end---*/
 /*3st page*/
-#skills {width: 100%; height: 80vh; position: relative; margin-top: 40px;}
+#skills {width: 100%; height: 800px; position: relative; margin-top: 40px;}
 
 .skill-blob {width:320px; height:320px; position:absolute; right:20px; background: url("../image/blob-haikei1.png") no-repeat; background-size: cover;}
 
@@ -79,7 +79,7 @@ h2 {padding-top: 40px; padding-left: 15px; font-weight: 600;}
 .bar span {padding: 0 10px;}
 /*---skills end---*/
 /*4st page*/
-#potfolio {width: 100%; height: 155vh; position: relative;background-color: #E8EFFF}
+#potfolio {width: 100%; height: 1600px; position: relative;background-color: #E8EFFF}
 
 .pot-blob {width:300px; height: 300px; background: url("../image/blob.png") no-repeat; background-size: cover; position: absolute; top: -10vh; left: 0; z-index: -1;}
 
@@ -123,7 +123,7 @@ h2 {padding-top: 40px; padding-left: 15px; font-weight: 600;}
 
 .modal-container.out .modal-background .modal{animation: zoomOut 0.5s cubic-bezier(0.165, 0.84, 0.44, 1) forwards;}
 
-.modal-container .modal-background {width: 100vw; height: 100vh; display: table-cell; background: rgba(0, 0, 0, 0.8); text-align: center; vertical-align: middle;}
+.modal-container .modal-background {width: 100vw; height: 1024px; display: table-cell; background: rgba(0, 0, 0, 0.8); text-align: center; vertical-align: middle;}
 
 @keyframes unfoldIn {
     0% {transform: scaleY(0.005) scaleX(0);}
@@ -147,12 +147,12 @@ h2 {padding-top: 40px; padding-left: 15px; font-weight: 600;}
 .unblob {width:320px; height: 320px; background: url("../image/blob-haikei2.png") no-repeat; background-size: cover; position: absolute; bottom: 0; right: 0; z-index: -1;}
 /*---potfolio end---*/
 /*5st page*/
-#interesting {width: 100%; height: 100vh; position: relative; }
+#interesting {width: 100%; height: 1024px; position: relative; }
 
 #int-blob {width:300px; height: 300px; background: url("../image/blob2.png") no-repeat; background-size: cover; position: absolute; bottom: 0; left: -100px; z-index: -1;}
 
 /*https://codepen.io/ramonchito2/pen/ZrVEJL float animation*/
-.interesting-inner {width:100%; max-width: 1000px; height: 80vh; margin: 0 auto; margin-top: 50px; position: relative;  animation: float 3s linear infinite;}
+.interesting-inner {width:100%; max-width: 1000px; height: 800px; margin: 0 auto; margin-top: 50px; position: relative;  animation: float 3s linear infinite;}
 
 @keyframes float {
     0% {transform: translate3d(0,0,0)}
@@ -195,8 +195,8 @@ h2 {padding-top: 40px; padding-left: 15px; font-weight: 600;}
 
 /*---interesting end*/
 /*6st page*/
-#contect {width: 100%; height: 100vh; background: url(../image/contectbg.jpg) no-repeat fixed; background-size: cover;}
-#contect-inner {width: 100%; height: 100vh; position: relative;}
+#contect {width: 100%; height: 1024px; background: url(../image/contectbg.jpg) no-repeat fixed; background-size: cover;}
+#contect-inner {width: 100%; height: 100%; position: relative;}
 
 .mail {width: 450px; position: absolute; top: 38%; left: 40%; margin: auto; font-size: 4rem; text-align: center;}
 .mail a {display: block; width: 100%;}
